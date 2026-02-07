@@ -1,0 +1,74 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+#containerJogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+    width: 80vh;
+}
+
+#copoInvertido{
+    height: 50vh;
+}
+
+.dado{
+    height: 10vh;
+}
+
+#inputs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20vh;
+    font-size: 3vh;
+
+    height: 8vh;
+}
+
+.opcoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#containerChute{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 25vh;
+}
+
+#containerNumDeDados{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 25vh;
+}
+
+#jogar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+    font-size: 4vh;
+    color: white;
+    background-color: red;
+    border: none;
+    border-radius: 1vh;
+    height: 6vh;
+    width: 18vh;
+}

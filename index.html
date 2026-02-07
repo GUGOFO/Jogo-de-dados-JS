@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="containerJogo">
+        <img src="/imgs/copoInvertido.png" alt="porra" id="copoInvertido">
+        <div id="dados">
+            <img src="/imgs/dados/lado_1.png" alt=" dado ne..." class="dado">
+        </div>
+        <div id="inputs">
+            <div id="containerChute">
+                <label for="chute">Chute</label>
+                <div class="opcoes">
+                    <button><i class="fa-solid fa-up-long"></i></button>
+                    <div id="chute">0</div>
+                    <button><i class="fa-solid fa-down-long"></i></button>
+                </div>
+            </div>
+            <div id="containerNumDeDados">
+                <label for="numDeDados">Num de dados</label>
+                <div class="opcoes">
+                    <button><i class="fa-solid fa-up-long"></i></button>
+                    <div id="numDeDados">0</div>
+                    <button><i class="fa-solid fa-down-long"></i></button>
+                </div>
+            </div>
+        </div>
+        <button id="jogar">PLAY</button>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/cbdc817e30.js" crossorigin="anonymous"></script>
+</body>
+</html>
