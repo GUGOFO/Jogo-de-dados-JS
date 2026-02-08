@@ -12,22 +12,27 @@
         <img src="/imgs/copoInvertido.png" alt="porra" id="copoInvertido">
         <div id="dados">
             <img src="/imgs/dados/lado_1.png" alt=" dado ne..." class="dado">
+            <img src="/imgs/dados/lado_2.png" alt=" dado ne..." class="dado">
+            <img src="/imgs/dados/lado_3.png" alt=" dado ne..." class="dado">
+            <img src="/imgs/dados/lado_4.png" alt=" dado ne..." class="dado">
+            <img src="/imgs/dados/lado_5.png" alt=" dado ne..." class="dado">
+            <img src="/imgs/dados/lado_6.png" alt=" dado ne..." class="dado">
         </div>
         <div id="inputs">
             <div id="containerChute">
                 <label for="chute">Chute</label>
                 <div class="opcoes">
-                    <button><i class="fa-solid fa-up-long"></i></button>
-                    <div id="chute">0</div>
-                    <button><i class="fa-solid fa-down-long"></i></button>
+                    <button onclick="modificarChute(1)" ><i class="fa-solid fa-up-long"></i></button>
+                    <div id="chute">1</div>
+                    <button onclick="modificarChute(-1)"><i class="fa-solid fa-down-long"></i></button>
                 </div>
             </div>
             <div id="containerNumDeDados">
                 <label for="numDeDados">Num de dados</label>
                 <div class="opcoes">
-                    <button><i class="fa-solid fa-up-long"></i></button>
-                    <div id="numDeDados">0</div>
-                    <button><i class="fa-solid fa-down-long"></i></button>
+                    <button onclick="modificarDado(1)"><i class="fa-solid fa-up-long"></i></button>
+                    <div id="numDeDados">1</div>
+                    <button onclick="modificarDado(-1)"><i class="fa-solid fa-down-long"></i></button>
                 </div>
             </div>
         </div>
