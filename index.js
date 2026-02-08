@@ -1,3 +1,21 @@
+/*   <3 FEITO SEM CHAT, GEMINI, IA OU QUALQUER COISA ASSIM <3
+
+  Caso vc estaja aq para ver se o chat fez isso n se preocupe,
+  O chat n faria um bagulho TÃO FEIO ASSIM kaskskakas
+  Possivelmente tem 99 formais mais eficientes de se fazer isso
+  Bom agora que estamos aqui posso falar um pouco as merdas q eu fiz kaslaksa
+
+  1 - A minha maior burrice foi o metodo q eu vejo o resulado de dados, simplesmente vejo
+      o source da imagem e analizo o index38 kskskkskak, nem preciso falar o quao propenso a bugs
+      isso ai é, se mudar uma coisinha no http o codigo para de funcionar uruuuuu
+  2 - A animação n foi feita por mim, porem gostaria de aprender a fazer, espero que um dia
+      eu consiga fazer coisas bonitinhas usando CSS (linguagem de mentira)
+  3 - Isso aqui n é uma merda (pelo menos acho que n kskkas) mas gostaria de falar q aprendi a fazer
+      o .inerHTML, achei muito foda de usar ta? top d+ usarei mais vezes
+
+  Se vc leu até aqui obrigado e n se mate ao ver o codigo, boa sorte ai ksjaksk
+*/
+ 
 const displayChutes = document.getElementById("chute");
 const displayNumDados = document.getElementById("numDeDados");
 const displayDados = document.getElementById("dados");
