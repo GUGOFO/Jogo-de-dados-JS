@@ -1,7 +1,8 @@
 const displayChutes = document.getElementById("chute");
 const displayNumDados = document.getElementById("numDeDados");
 const displayDados = document.getElementById("dados");
-const teste = document.getElementById("dado1");
+const copoInvertido = document.getElementById("copoInvertido");
+const btnJogar = document.getElementById("jogar");
 
 function modificarChute(quantidade){
     let novoValor = Number(displayChutes.textContent) + quantidade;
@@ -34,16 +35,39 @@ function jogar(){
     const chute = Number(displayChutes.textContent);
     let indexDoResultadoDoDado = 38;
     let resultadoTotal = 0;
+    btnJogar.disabled = true;
+    modificarBotoes(true);
 
-    modificarDado(0);
+    let linhas = Math.ceil(numDeDados / 2);
+    let distanciaParaDescer = 7 + (linhas * 10); 
+    copoInvertido.style.setProperty('--distancia', `${distanciaParaDescer}vh`);
 
-    for(let i = 1; i <= numDeDados; i++){
-        const iezimoDado = document.getElementById(`dado${i}`);
-        let resultadoDoDado = iezimoDado.src[indexDoResultadoDoDado];
-        resultadoTotal += Number(resultadoDoDado);
+    copoInvertido.classList.add("animar-copo");
+    
+    setTimeout(() => {
+        modificarDado(0);
+        
+        for(let i = 1; i <= numDeDados; i++){
+            const iezimoDado = document.getElementById(`dado${i}`);
+            let resultadoDoDado = iezimoDado.src[indexDoResultadoDoDado];
+            resultadoTotal += Number(resultadoDoDado);
+        }
+        
+        console.log(resultadoTotal);
+        if(resultadoTotal == chute) console.log("parabens");
+        else console.log("troxaa errou");
+    },500);
+    
+    setTimeout(() => {
+        copoInvertido.classList.remove("animar-copo")
+        btnJogar.disabled = false;
+        modificarBotoes(false);
+    }, 1000);
+}
+
+function modificarBotoes(modificar){
+    for(let i = 0; i < 4; i++){
+        const botao = document.getElementById(`botao${i}`);
+        botao.disabled = modificar;
     }
-
-    console.log(resultadoTotal);
-    if(resultadoTotal == chute) console.log("parabens");
-    else console.log("troxaa errou");
 }

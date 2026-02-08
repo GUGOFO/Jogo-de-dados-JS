@@ -23,6 +23,8 @@ body{
 
 #copoInvertido{
     height: 45vh;
+    position: relative;
+    z-index: 10;
 }
 
 .dado{
@@ -139,4 +141,23 @@ body{
 #jogar:active{
     background-color: rgb(150, 0, 0);
     color: rgba(255, 255, 255, 0.7);
+}
+
+/*Usei o chat pra fazer essa parte aqui, minimo interesse em fazer a animação e
+ pesquisa-la por em quanto kaskaska*/
+
+.animar-copo {
+    animation: moverCopo 1s ease-in-out forwards;
+}
+
+@keyframes moverCopo {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(var(--distancia, 20vh)); 
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
