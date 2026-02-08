@@ -1,6 +1,7 @@
 const displayChutes = document.getElementById("chute");
 const displayNumDados = document.getElementById("numDeDados");
 const displayDados = document.getElementById("dados");
+const displayResultado = document.getElementById("containerResultado");
 const copoInvertido = document.getElementById("copoInvertido");
 const btnJogar = document.getElementById("jogar");
 
@@ -39,7 +40,7 @@ function jogar(){
     modificarBotoes(true);
 
     let linhas = Math.ceil(numDeDados / 2);
-    let distanciaParaDescer = 7 + (linhas * 10); 
+    let distanciaParaDescer = 6 + (linhas * 10); 
     copoInvertido.style.setProperty('--distancia', `${distanciaParaDescer}vh`);
 
     copoInvertido.classList.add("animar-copo");
@@ -54,8 +55,9 @@ function jogar(){
         }
         
         console.log(resultadoTotal);
-        if(resultadoTotal == chute) console.log("parabens");
-        else console.log("troxaa errou");
+        displayResultado.innerHTML = ""
+        if(resultadoTotal == chute) displayResultado.innerHTML += `<div class="resultado" id="acertou">ACERTOU</div>`;
+        else displayResultado.innerHTML += `<div class="resultado" id="errou">ERROU</div>`;
     },500);
     
     setTimeout(() => {
